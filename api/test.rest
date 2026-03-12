@@ -1,0 +1,163 @@
+POST http://localhost:8000/api/users/
+Content-Type: application/json
+
+{
+  "code": "SONKWA-F",
+  "name": "SONKWA",
+  "firstname": "Fernand",
+  "phone": "679971829",
+  "password": "123456",
+  "dik": false,
+  "role_name": "Admin",
+  "agence_code": "C-01"
+}
+
+###
+
+GET http://localhost:8000/api/users/
+
+###
+
+POST http://localhost:8000/api/clients/
+Content-Type: application/json
+
+{
+    "code": "CL-C-03-000002",
+    "name":"JIOKENG FEUTCHOU",
+    "firstname":"JEANY",
+    "gender": "M",
+    "civility": "1",
+    "phone": "699000001",
+    "agence_code": "C-03",
+    "sale_agent_code": "C-03-012",
+    "user_code": "sonkwa",
+    "active": true,
+    "connect": false
+}
+
+###
+GET  http://localhost:8000/api/clients/
+
+###
+POST http://localhost:8000/api/commerciaux/
+Content-Type: application/json
+
+{
+    "code": "C-03-001",
+    "name": "TCHOUTOUO",
+    "firstname": "nul",
+    "phone": "649731855",
+    "cni": "Kgub787845",
+    "active": true,
+    "connect": false,
+    "agence_code": "C-03",
+    "user_code": "sonkwa",
+    "old_code": "C-03-001",
+    "cb_commitment_acc": "3282300000149",
+    "cb_commitment_acc_name": "Compte d'engagement de TCHOUTOUO",
+    "cb_transaction_acc": "3722600000175",
+    "cb_transaction_acc_name": "Compte d'opération de TCHOUTOUO",
+    "cb_excess_acc": "4632000000567",
+    "cb_excess_acc_name": "Compte d'excédent de TCHOUTOUO",
+    "cb_deficit_acc": "4631000000795",
+    "cb_deficit_acc_name": "Compte manquant de TCHOUTOUO",
+    "cb_salary_acc": "",
+    "cb_salary_acc_name": "",
+    "code_collect": "",
+    "sale_agent_id": null
+}
+
+###
+GET http://localhost:8000/api/commerciaux/
+
+###
+POST http://localhost:8000/api/prets/
+Content-Type: application/json
+
+{
+    "reference": "PRT-C03-052023-2618",
+    "amount": "1000000.00",
+    "number_of_due_dates": 2,
+    "status": "paid",
+    "effective_date": "2023-05-25",
+    "first_due_date": "2023-06-25",
+    "last_due_date": "2023-07-25",
+    "refund_account": "373200-C03-000326-01",
+    "periodicity_name": "MENSUELLE",
+    "product_loan_code": "PCR-01",
+    "product_insurance_code": "PASR-01",
+    "customer_code": "CL-C-03-000326",
+    "agence_code": "C-03",
+    "manager_code": "MOGUE-P",
+    "user_code": "sonkwa",
+    "backdated": false
+}
+
+###
+
+GET http://localhost:8000/api/prets/
+
+###
+
+POST http://localhost:8000/api/comptes/
+Content-Type: application/json
+
+{
+    "number": "571000-C03-000000-00",
+    "name": "COMPTE CAISSE AGENCE : CECAW-BEPANDA",
+    "active": true,
+    "balance": "-287514383.00",
+    "standby_balance": "0.00", 
+    "can_take_loans": false,
+    "working_date_day": "2024-01-01",
+    "max_date_op": null,
+    "customer_code": null,
+    "sale_agent_code": null,
+    "insurer_code": null,
+    "product_loan_code": null,
+    "agence_code": "C-03",
+    "user_code": "Tchatchoua"
+}
+
+###
+
+GET http://localhost:8000/api/comptes/
+
+###
+POST http://localhost:8000/api/comptes/
+Content-Type: application/json
+
+{
+    "code": "PCO-01",
+    "name": "COLLECTE ORDINAIRE",
+    "duration": 1,
+    "commission_rate": "0.00",
+    "pay_rate": "0.00",
+    "is_active": true,
+    "is_paid": false,
+    "is_commission_paid": true,
+    "user_code": "sonkwa"
+}
+
+###
+GET http://localhost:8000/api/comptes/
+
+###
+
+POST http://localhost:8000/api/recus/
+Content-Type: application/json
+
+{
+    "number": "4831165B",
+    "is_use": true,
+    "cancel_by": null,
+    "detail": "",
+    "agence_code": "C-04",
+    "sale_agent_code": "C-03-026",
+    "user_code": "TCHIEUKO-G"
+}
+
+
+###
+
+GET http://localhost:8000/api/recus/
