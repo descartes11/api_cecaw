@@ -25,8 +25,10 @@ SECRET_KEY = 'django-insecure-6z3+43pkxoj69q)2p$-6v$d%(=b8g@@7br5^sa$n(8h6xy&-v=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['api-cecaw.onrender.com']
+ALLOWED_HOSTS = ['api-cecaw.onrender.com,localhost', '127.0.0.1']
 
+
+CSRF_TRUSTED_ORIGINS = ['https://api-cecaw.onrender.com']
 
 # Application definition
 
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -122,5 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'  
 
 CORS_ALLOW_ALL_ORIGINS = True

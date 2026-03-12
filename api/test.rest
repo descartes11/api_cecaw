@@ -2,7 +2,7 @@ POST http://localhost:8000/api/users/
 Content-Type: application/json
 
 {
-  "code": "SONKWA-F",
+  "code": "SONKWA-F1",
   "name": "SONKWA",
   "firstname": "Fernand",
   "phone": "679971829",
