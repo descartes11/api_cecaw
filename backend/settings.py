@@ -23,10 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6z3+43pkxoj69q)2p$-6v$d%(=b8g@@7br5^sa$n(8h6xy&-v='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['api-cecaw.onrender.com,localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = ['https://api-cecaw.onrender.com']
 
